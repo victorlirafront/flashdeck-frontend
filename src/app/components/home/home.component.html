@@ -1,4 +1,8 @@
-<div class="min-h-[80vh]">
+<!-- Conteúdo quando o usuário está autenticado -->
+<app-dashboard *ngIf="isAuthenticated"></app-dashboard>
+
+<!-- Landing page quando o usuário NÃO está autenticado -->
+<div *ngIf="!isAuthenticated" class="min-h-[80vh]">
   <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white text-center py-20 px-5 min-h-[100vh] flex flex-col justify-center items-center">
     <h1 class="text-5xl md:text-3xl mb-5 font-bold">Bem-vindo ao Flashdeck AI</h1>
     <p class="text-xl md:text-base mb-10 opacity-90">Aprenda inglês com flashcards inteligentes que evoluem com IA.</p>
